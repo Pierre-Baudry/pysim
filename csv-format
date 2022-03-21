@@ -3,6 +3,7 @@ This file aims to describe the format of the CSV file pySim uses.
 The first line contains the fieldnames which will be used by pySim. This
 avoids having a specific order.
 
+Fields should be separated by commas.
 The field names are the following:
 
 iccid: ICCID of the card. Used to identify the cards (with --read-iccid)

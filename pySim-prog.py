@@ -712,6 +712,8 @@ def process_card(opts, first, ch):
         else:
             imsi = opts.imsi
         cp = read_params_csv(opts, imsi=imsi, iccid=iccid)
+        if opts.op is not None:
+            cp['opc'] = derive_milenage_opc(cp['ki'], opts.op)
     if cp is None:
         print("Error reading parameters from CSV file!\n")
         return 2
